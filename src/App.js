@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { Typography } from "@material-ui/core";
+import { BookList } from "./components/BookList";
 
 function App() {
+  const books = [
+    { name: 'Refactoring' },
+    { name: 'Domain-driven design' }
+  ]
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Typography variant="h2" component="h2" data-test="heading">DevBook!</Typography>
+      <BookList books={books}/>
+    </>
   );
 }
 
