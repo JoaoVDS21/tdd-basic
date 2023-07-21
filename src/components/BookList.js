@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography } from "@material-ui/core";
 
-export const BookList = ({books}) => (
+export const BookList = ({books, loading, error}) => (
   <div data-test="book-list">
     {
       books.map(book => (
